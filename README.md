@@ -18,9 +18,11 @@ python3 manage.py runserver
 ```bash
 pytest
 ```
-[POST] /api/auth/register/                    data = {"name":"some name", "email":"i@gmaiil.com", "password":"simple_password"}
+
+```python
+[POST] /api/auth/register/                    data = {"name":"some name", "email":"i@gmaiil.com", "password":"simple_password"} 
 [POST] /api/auth/login/                       data = {"email":"i@gmail.com", "password":"simple_password"} => response {"refresh":"JWTtoken", "access":"JWTtoken"}
-[POST] /api/restaurants/                      data = {"name":"Lviv Croissants", address:"Kozelnytska 2a"}
+[POST] /api/restaurants/                      data = {"name":"Lviv Croissants", address:"Kozelnytska 2a"}<br />
 [GET] /api/menu/                              => response {[menus]}    #get all menus
 [GET] /api/get_ranking                        => response {[menus]}    #get all today menus
 [POST] /api/vote_for_menu/{menu_id}           => response{"message": "successfully voted"} #vote for menu
@@ -28,9 +30,7 @@ pytest
 
 [POST] /api/restaurants/{restaurant.id}/add_restaurant_admin/?user_id={user_id}
 
-
-
-
+```
 
 
 In this app you need to create superuser. With this user you can create restaurants and get list of all users.
